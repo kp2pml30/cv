@@ -1,0 +1,179 @@
+\documentclass[9pt]{template/developercv} % Default font size, values from 8-12pt are recommended
+
+\usepackage{ragged2e}
+\usepackage{tikz}
+
+\def\MyMail{kp2pml30@gmail.com}
+\def\MyHRef#1{\href{https://#1}{#1}}
+% faLink faSearch faWheelchairAlt faLocationArrow faInfo faCodeFork
+\def\MyCode#1{\textsuperscript{\href{#1}{{\tiny\,\faCodeFork}}}}
+
+\newenvironment{MyEnumerate}
+{
+	\vspace{-0.25\baselineskip}
+	\begin{enumerate}
+	\setlength{\itemsep}{0pt}
+	\setlength{\parskip}{0pt}
+	\setlength{\parsep}{0pt}}
+{\end{enumerate}\vspace{-0.25\baselineskip}}
+
+\begin{document}
+
+\tikzstyle{every picture}+=[remember picture]
+
+\begin{minipage}[t]{0.45\textwidth}
+	\vspace{-\baselineskip}
+
+	\colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Kira}}}}}\\
+	\colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Prokopenko}}}}}\tikz[baseline,remember picture]\node[inner sep=0pt,anchor=base] (lastName) {};\\
+
+	\begin{tikzpicture}[overlay]
+		\node[anchor=north east, yshift=-0.5ex] at (lastName) {\footnotesize{she/her}};
+	\end{tikzpicture}
+	%\null\hspace{8cm}\footnotesize{she/her}\\
+
+	\vspace{6pt}
+
+	{\huge Compiler Engineer}
+\end{minipage}
+\begin{minipage}[t]{0.29\textwidth}
+	\vspace{-\baselineskip}
+
+	%\icon{UserSecret}{12}{she/her}\\
+	\icon{At}{12}{\href{mailto:\MyMail}{\MyMail}}\\
+	\icon{Linkedin}{12}{\MyHRef{linkedin.com/in/kp2pml30}}\\
+	\icon{Phone}{12}{\href{tel:79043337679}{+7 (904) 333 76 79}}\\
+\end{minipage}
+\begin{minipage}[t]{0.26\textwidth}
+	\vspace{-\baselineskip}
+
+	\icon{Github}{12}{\MyHRef{github.com/kp2pml30}}\\
+	\icon{GitSquare}{12}{\MyHRef{gitee.com/kprokopenko}}\\
+	\icon{Globe}{12}{relocatable}\\
+\end{minipage}
+
+\vspace{0.5cm}
+
+\begin{minipage}[t]{0.4\textwidth}
+	\vspace{-\baselineskip}
+	\cvsect{Who Am I?}
+
+	I am a compiler and runtime engineer with extensive experience of exploring new code bases and brainstorming ways of integrating new features into them\\
+	I am interested in everything related to programming languages design, implementation and tooling for over six years and looking forward to continue working with bleeding edge technologies
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+	\vspace{-\baselineskip}
+	\cvsect{Languages\&Technologies that I know}
+	\vspace{-0.5\baselineskip}
+
+	\begin{itemize}
+		\setlength{\itemsep}{0pt}
+		\setlength{\parskip}{0.0\baselineskip}
+    \setlength{\parsep}{0pt}
+		\item[\colorbox{black}{\textcolor{white}{Native}}] C, C++, Haskell
+		\item[\colorbox{black}{\textcolor{white}{Fluent}}] Java, Zig, CMake, Go
+		\item[\colorbox{black}{\textcolor{white}{Professional}}] Idirs, Kotlin, Ruby, Python, TypeScript, C\#
+		\item[\colorbox{black}{\textcolor{white}{Basic}}] Bash, Coq, Arend, SQL, GDScript, Prolog, ECMAScript, Elixir, X86 assembly, \LaTeX
+		\item[\colorbox{black}{\textcolor{white}{Beginner}}] Pearl, Clojure, Lua
+	\end{itemize}
+	\vspace{-0.5\baselineskip}
+	\noindent\hspace{-0.1\textwidth}\rule{1.1\textwidth}{0.4pt}
+	\begin{itemize}
+		\setlength{\itemsep}{0pt}
+		\setlength{\parskip}{0.0\baselineskip}
+    \setlength{\parsep}{0pt}
+		\item[\colorbox{black}{\textcolor{white}{Techs}}] git, POCO C++, Qt5, ANTLR4, Happy, \dots
+	\end{itemize}
+\end{minipage}
+
+%\begin{center}
+%	\bubbles{5/Eclipse, 6/git, 4/Office, 3/Inkscape, 3/Blender}
+%\end{center}
+
+\cvsect{Experience}
+
+\begin{entrylist}
+	\entry
+		{2022 ---\\\footnotesize{intern}}
+		{Compiler and runtime engineer}
+		{Huawei}
+		{Designed integration of non-erased generics without monomorphization into existing runtime, worked on standard libraries development, and implemented following from scratch:
+			\begin{MyEnumerate}
+			\item Documentation generator from source code\MyCode{https://gitee.com/kprokopenko/arkcompiler_ets_frontend/tree/documentation-generator/}
+			\item Interopability between statically and dynamically typed languages, including effective JIT compilation and working with common GC\MyCode{https://gitee.com/kprokopenko/arkcompiler_runtime_core/pulls/1}\MyCode{https://gitee.com/kprokopenko/arkcompiler_ets_runtime/pulls/1}
+			\item Bytecode files linker\MyCode{https://gitee.com/kprokopenko/arkcompiler_runtime_core/tree/linker-pull}
+			\item Language generation into unmatching VM bytecode, including Type API
+		\end{MyEnumerate}
+			\texttt{C++}\slashsep\texttt{Go}\slashsep\texttt{x86\_64 asm}\slashsep\texttt{TypeScript}\slashsep\texttt{Ruby}\slashsep\texttt{Private languages}\slashsep\texttt{ANTLR4}}
+	\entry
+		{2020\\\footnotesize{part time}}
+		{Junior C++ Developer}
+		{vasexpets}
+		{Worked on system intrusion monitor, which supervised usb devices and services\\
+		\texttt{C++}\slashsep\texttt{GNU/Linux}}
+\end{entrylist}
+
+\cvsect{Education}
+
+\begin{entrylist}
+	\entry
+		{2023 ---}
+		{Master's Degree, Tools for developing and analyzing programs}
+		{ITMO University}
+		{}
+	\entry
+		{2019 --- 2023}
+		{Bachelor's Degree, Applied math and CS}
+		{ITMO University}
+		{Among other subjects, I studied type theory, logics in category theory and semantics of programming languages. Implemented following projects:
+			\begin{MyEnumerate}
+				\item Lama language compiler to x86\_32 assembly, including mark-and-copy gc\MyCode{https://github.com/kp2pml30/compilers-supplementary/tree/A10-gc}
+				\item LL(1) parser generator (Haskell $\rightarrow$ Haskell\MyCode{https://github.com/kp2pml30/ifmo-labs/tree/master/translation-methods/4}\;\textbar\;Idris)
+				\item Copy-on-write fork in xv6\MyCode{https://github.com/kp2pml30/ifmo-labs/tree/master/os/cow-kp2pml30}
+				\item Few proofs in Coq in big and small step semantics, as well as in Hoare triples\MyCode{https://github.com/kp2pml30/ifmo-labs/tree/master/semantics}
+				\item Small language interpreter in Haskell\MyCode{https://github.com/kp2pml30/ifmo-labs/tree/master/fp/hw3}
+			\end{MyEnumerate}
+		}
+	\entry
+		{2015 --- 2019}
+		{School, Computer Graphics Support Group}
+		{Physics and Mathematics Lyceum \#30, St. Petersburg}
+		{Gave talks on numerous scientific conferences. Personal projects include:
+			\begin{MyEnumerate}
+			\item Realtime 3D rendering engine with OpenGL/DirectX \& WinAPI
+			\item Ray tracing on CPU
+			\item Ray marching using SDF on GPU
+			\end{MyEnumerate}
+			\texttt{C}\slashsep\texttt{C++}\slashsep\texttt{OpenGL}\slashsep\texttt{DirectX}\slashsep\texttt{GLSL}\slashsep\texttt{HLSL}}
+\end{entrylist}
+
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{-\baselineskip}
+
+	\cvsect{Languages}
+
+	\begin{tabular}{lp{0.05\textwidth}l}
+		\textbf{English} & & C1\\
+		\textbf{Russian} & & native\\
+		\textbf{Japanese} & & learnt for a few months
+	\end{tabular}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{-\baselineskip}
+
+	\cvsect{Hobbies}
+
+	I love drawing and doing stuff related to visual art in general, wish to continue going to climbing
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{-\baselineskip}
+
+	\cvsect{Non-profit}
+
+	I regularly donate to LGBTQ+ charitable organization that helped me in the past
+\end{minipage}
+
+\end{document}
