@@ -1,3 +1,4 @@
 *
 !.gitignore
-!cv.pdf
+!cv-*.pdf
+!cv.svg
