@@ -17,8 +17,7 @@ err () {
 
 git checkout artifacts
 cp build/main.pdf cv.pdf
-git add cv.pdf
+pdf2svg cv.pdf cv.svg
+git add cv.pdf cv.svg
 git commit --amend --no-edit
 git checkout master
-
-
