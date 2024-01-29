@@ -1,4 +1,4 @@
-\documentclass[9pt]{template/developercv} % Default font size, values from 8-12pt are recommended
+\documentclass[9pt]{template/developercv}
 
 \usepackage{ragged2e}
 \usepackage{tikz}
@@ -32,8 +32,6 @@
 	\end{tikzpicture}
 	%\null\hspace{8cm}\footnotesize{she/her}\\
 
-	\vspace{6pt}
-
 	{\huge Compiler Engineer}
 \end{minipage}
 \begin{minipage}[t]{0.29\textwidth}
@@ -52,17 +50,17 @@
 	\icon{Globe}{12}{relocatable}\\
 \end{minipage}
 
-\vspace{0.5cm}
+\vspace{\baselineskip}
 
-\begin{minipage}[t]{0.4\textwidth}
+\begin{minipage}[t]{0.35\textwidth}
 	\vspace{-\baselineskip}
 	\cvsect{Who Am I?}
 
-	I am a compiler and runtime engineer with extensive experience of exploring new code bases and brainstorming ways of integrating new features into them\\
-	I am interested in everything related to programming languages design, implementation and tooling for over six years and looking forward to continue working with bleeding edge technologies
+	Curious compiler and runtime engineer experienced in exploring large code bases and brainstorming ways of integrating new features into them\\
+	I am interested in programming languages design, implementation, tooling and everything related for over six years and look forward to continuing working with bleeding edge technologies
 \end{minipage}
 \hfill
-\begin{minipage}[t]{0.5\textwidth}
+\begin{minipage}[t]{0.55\textwidth}
 	\vspace{-\baselineskip}
 	\cvsect{Languages\&Technologies that I know}
 	\vspace{-0.5\baselineskip}
@@ -82,57 +80,59 @@
 	\begin{itemize}
 		\setlength{\itemsep}{0pt}
 		\setlength{\parskip}{0.0\baselineskip}
-    \setlength{\parsep}{0pt}
-		\item[\colorbox{black}{\textcolor{white}{Techs}}] git, POCO C++, Qt5, ANTLR4, Happy, \dots
+	\setlength{\parsep}{0pt}
+		\item[\colorbox{black}{\textcolor{white}{Techs}}] git, POCO C++, Qt5, ANTLR4, Happy, tsc, OpenJDK, Z3 \dots
 	\end{itemize}
 \end{minipage}
 
-%\begin{center}
-%	\bubbles{5/Eclipse, 6/git, 4/Office, 3/Inkscape, 3/Blender}
-%\end{center}
 
 \cvsect{Experience}
 
 \begin{entrylist}
 	\entry
-		{2022 ---\\\footnotesize{intern}}
+		{2022 ---}
 		{Compiler and runtime engineer}
 		{Huawei}
-		{Designed integration of non-erased generics without monomorphization into existing runtime, worked on standard libraries development, and implemented following from scratch:
+		{Worked on standard libraries development, and implemented following from scratch:
 			\begin{MyEnumerate}
+			\item Interoperability between statically and dynamically typed languages, including effective JIT compilation and working with common GC\MyCode{https://gitee.com/kprokopenko/arkcompiler_runtime_core/pulls/1}\MyCode{https://gitee.com/kprokopenko/arkcompiler_ets_runtime/pulls/1}
+			\item Type Creation API in reflections library
 			\item Documentation generator from source code\MyCode{https://gitee.com/kprokopenko/arkcompiler_ets_frontend/tree/documentation-generator/}
-			\item Interopability between statically and dynamically typed languages, including effective JIT compilation and working with common GC\MyCode{https://gitee.com/kprokopenko/arkcompiler_runtime_core/pulls/1}\MyCode{https://gitee.com/kprokopenko/arkcompiler_ets_runtime/pulls/1}
 			\item Bytecode files linker\MyCode{https://gitee.com/kprokopenko/arkcompiler_runtime_core/tree/linker-pull}
 			\item Language generation into unmatching VM bytecode, including Type API
 		\end{MyEnumerate}
 			\texttt{C++}\slashsep\texttt{Go}\slashsep\texttt{x86\_64 asm}\slashsep\texttt{TypeScript}\slashsep\texttt{Ruby}\slashsep\texttt{Private languages}\slashsep\texttt{ANTLR4}}
 	\entry
-		{2020\\\footnotesize{part time}}
+		{2020\\\footnotesize{intern}}
 		{Junior C++ Developer}
 		{vasexpets}
-		{Worked on system intrusion monitor, which supervised usb devices and services\\
-		\texttt{C++}\slashsep\texttt{GNU/Linux}}
+		{Worked on system intrusion monitor, which supervised usb devices and services
+		\vspace{-0.2\baselineskip}
+		\begin{center}\texttt{C++}\slashsep\texttt{GNU/Linux}\end{center}}
 \end{entrylist}
 
+\vspace{-2\baselineskip}
 \cvsect{Education}
 
 \begin{entrylist}
 	\entry
-		{2023 ---}
-		{Master's Degree, Tools for developing and analyzing programs}
-		{ITMO University}
-		{}
+		{2023 ---\\\footnotesize{Master's Degree}}
+		{Tools for developing and analyzing programs}
+		{\href{https://en.itmo.ru}{ITMO University}}
+		{Implemented intrinsic in OpenJDK for RISC-V, built Sea of Nodes for TS
+		\vspace{-0.2\baselineskip}
+		\begin{center}\texttt{tsc}\slashsep\texttt{OpenJDK}\slashsep\texttt{Z3}\end{center}}
 	\entry
-		{2019 --- 2023}
-		{Bachelor's Degree, Applied math and CS}
-		{ITMO University}
+		{2019 --- 2023\\\footnotesize{Bachelor's Degree}}
+		{Applied math and CS}
+		{\href{https://en.itmo.ru}{ITMO University}}
 		{Among other subjects, I studied type theory, logics in category theory and semantics of programming languages. Implemented following projects:
 			\begin{MyEnumerate}
-				\item Lama language compiler to x86\_32 assembly, including mark-and-copy gc\MyCode{https://github.com/kp2pml30/compilers-supplementary/tree/A10-gc}
-				\item LL(1) parser generator (Haskell $\rightarrow$ Haskell\MyCode{https://github.com/kp2pml30/ifmo-labs/tree/master/translation-methods/4}\;\textbar\;Idris)
+				\item Lama language compiler to x86\_32 assembly, including precise mark-and-copy GC\MyCode{https://github.com/kp2pml30/compilers-supplementary/tree/A10-gc}
+				\item LL(1) parser generator (Haskell $\rightarrow$ Haskell\MyCode{https://github.com/kp2pml30/ifmo-labs/tree/master/translation-methods/4}\;\textbar\;Idris\MyCode{https://github.com/kp2pml30/yadk/tree/master/host-tools/parser-generator})
 				\item Copy-on-write fork in xv6\MyCode{https://github.com/kp2pml30/ifmo-labs/tree/master/os/cow-kp2pml30}
 				\item Few proofs in Coq in big and small step semantics, as well as in Hoare triples\MyCode{https://github.com/kp2pml30/ifmo-labs/tree/master/semantics}
-				\item Small language interpreter in Haskell\MyCode{https://github.com/kp2pml30/ifmo-labs/tree/master/fp/hw3}
+				\item Toy language interpreter in Haskell\MyCode{https://github.com/kp2pml30/ifmo-labs/tree/master/fp/hw3}
 			\end{MyEnumerate}
 		}
 	\entry
@@ -142,14 +142,15 @@
 		{Gave talks on numerous scientific conferences. Personal projects include:
 			\begin{MyEnumerate}
 			\item Realtime 3D rendering engine with OpenGL/DirectX \& WinAPI
-			\item Ray tracing on CPU
-			\item Ray marching using SDF on GPU
+			\item Ray tracing engine on CPU
+			\item Ray marching framework using SDF on GPU
 			\end{MyEnumerate}
-			\texttt{C}\slashsep\texttt{C++}\slashsep\texttt{OpenGL}\slashsep\texttt{DirectX}\slashsep\texttt{GLSL}\slashsep\texttt{HLSL}}
+			\vspace{-0.75\baselineskip}
+			\begin{center}\texttt{C}\slashsep\texttt{C++}\slashsep\texttt{OpenGL}\slashsep\texttt{DirectX}\slashsep\texttt{GLSL}\slashsep\texttt{HLSL}\end{center}}
 \end{entrylist}
 
 \begin{minipage}[t]{0.3\textwidth}
-	\vspace{-\baselineskip}
+	\vspace{-2\baselineskip}
 
 	\cvsect{Languages}
 
@@ -161,19 +162,19 @@
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.3\textwidth}
-	\vspace{-\baselineskip}
-
-	\cvsect{Hobbies}
-
-	I love drawing and doing stuff related to visual art in general, wish to continue going to climbing
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.3\textwidth}
-	\vspace{-\baselineskip}
+	\vspace{-2\baselineskip}
 
 	\cvsect{Non-profit}
 
 	I regularly donate to LGBTQ+ charitable organization that helped me in the past
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{-2\baselineskip}
+
+	\cvsect{Hobbies}
+
+	I love drawing and doing stuff related to visual art in general, wish to continue going to climbing
 \end{minipage}
 
 \end{document}
