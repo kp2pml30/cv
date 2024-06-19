@@ -2,7 +2,9 @@
 
 \usepackage{ragged2e}
 \usepackage{tikz}
+\usepackage{relsize}
 
+\def\Cpp{{C\raisebox{0.05em}{\texttt{++}}}}
 \def\MyMail{kp2pml30@gmail.com}
 \def\MyHRef#1{\href{https://#1}{#1}}
 % faLink faSearch faWheelchairAlt faLocationArrow faInfo faCodeFork
@@ -32,6 +34,8 @@
 	\end{tikzpicture}
 	%\null\hspace{8cm}\footnotesize{she/her}\\
 
+	\vspace{-0.5\baselineskip}
+
 	{\huge Compiler Engineer}
 \end{minipage}
 \begin{minipage}[t]{0.29\textwidth}
@@ -40,20 +44,19 @@
 	%\icon{UserSecret}{12}{she/her}\\
 	\icon{At}{12}{\href{mailto:\MyMail}{\MyMail}}\\
 	\icon{Linkedin}{12}{\MyHRef{linkedin.com/in/kp2pml30}}\\
-	\icon{Phone}{12}{\href{tel:79043337679}{+7 (904) 333 76 79}}\\
+	\icon{Phone}{12}{\href{tel:374094115939}{+374 (94) 11 59 39}}\\
 \end{minipage}
 \begin{minipage}[t]{0.26\textwidth}
 	\vspace{-\baselineskip}
 
 	\icon{Github}{12}{\MyHRef{github.com/kp2pml30}}\\
 	\icon{GitSquare}{12}{\MyHRef{gitee.com/kprokopenko}}\\
-	\icon{Globe}{12}{relocatable}\\
+	\icon{Globe}{12}{Armenia\slashsep relocatable}\\
 \end{minipage}
 
 \vspace{\baselineskip}
 
 \begin{minipage}[t]{0.35\textwidth}
-	\vspace{-\baselineskip}
 	\cvsect{Who Am I?}
 
 	Curious compiler and runtime engineer experienced in exploring large code bases and brainstorming ways of integrating new features into them\\
@@ -61,7 +64,6 @@
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.55\textwidth}
-	\vspace{-\baselineskip}
 	\cvsect{Languages\&Technologies that I know}
 	\vspace{-0.5\baselineskip}
 
@@ -69,7 +71,7 @@
 		\setlength{\itemsep}{0pt}
 		\setlength{\parskip}{0.0\baselineskip}
     \setlength{\parsep}{0pt}
-		\item[\colorbox{black}{\textcolor{white}{Native}}] C, C++, Haskell
+		\item[\colorbox{black}{\textcolor{white}{Native}}] C, \Cpp, Haskell
 		\item[\colorbox{black}{\textcolor{white}{Fluent}}] Java, Zig, CMake, Go
 		\item[\colorbox{black}{\textcolor{white}{Professional}}] Idirs, Kotlin, Ruby, Python, TypeScript, C\#
 		\item[\colorbox{black}{\textcolor{white}{Basic}}] Bash, Coq, Arend, SQL, GDScript, Prolog, ECMAScript, Elixir, x86 assembly, \LaTeX
@@ -81,7 +83,7 @@
 		\setlength{\itemsep}{0pt}
 		\setlength{\parskip}{0.0\baselineskip}
 	\setlength{\parsep}{0pt}
-		\item[\colorbox{black}{\textcolor{white}{Techs}}] git, POCO C++, Qt5, ANTLR4, Happy, tsc, OpenJDK, Z3 \dots
+		\item[\colorbox{black}{\textcolor{white}{Techs}}] git, POCO \Cpp, Qt5, ANTLR4, Happy, tsc, OpenJDK, Z3 \dots
 	\end{itemize}
 \end{minipage}
 
@@ -90,9 +92,15 @@
 
 \begin{entrylist}
 	\entry
-		{2022 ---}
+		{2024}
+		{Software Engineer}
+		{Teza}
+		{Researched new \Cpp realtime trading platform, worked with structured data\\
+			\texttt{C++}\slashsep\texttt{Java}\slashsep\texttt{Python}}
+	\entry
+		{2022 --- 2024}
 		{Compiler and runtime engineer}
-		{Huawei}
+		{Huawei R\&D}
 		{Worked on standard libraries development, and implemented following from scratch:
 			\begin{MyEnumerate}
 			\item Interoperability between statically and dynamically typed languages, including effective JIT compilation and working with common GC\MyCode{https://gitee.com/kprokopenko/arkcompiler_runtime_core/pulls/1}\MyCode{https://gitee.com/kprokopenko/arkcompiler_ets_runtime/pulls/1} Got 2x performance increase
@@ -104,19 +112,19 @@
 			\texttt{C++}\slashsep\texttt{Go}\slashsep\texttt{x86\_64 asm}\slashsep\texttt{TypeScript}\slashsep\texttt{Ruby}\slashsep\texttt{Private languages}\slashsep\texttt{ANTLR4}}
 	\entry
 		{2020\\\footnotesize{intern}}
-		{Junior C++ Developer}
+		{Junior \Cpp Developer}
 		{vasexpets}
 		{Worked on system intrusion monitor, which supervised usb devices and services
 		\vspace{-0.2\baselineskip}
 		\begin{center}\texttt{C++}\slashsep\texttt{GNU/Linux}\end{center}}
 \end{entrylist}
 
-\vspace{-2\baselineskip}
+\vspace{-2.5\baselineskip}
 \cvsect{Education}
 
 \begin{entrylist}
 	\entry
-		{2023 ---\\\footnotesize{Master's Degree}}
+		{2023 ---\\\textbf{discontinued}\\\footnotesize{Master's Degree}}
 		{Tools for developing and analyzing programs}
 		{\href{https://en.itmo.ru}{ITMO University}}
 		{Implemented intrinsic in OpenJDK for RISC-V, built Sea of Nodes for TS
@@ -157,7 +165,6 @@
 	\begin{tabular}{lp{0.05\textwidth}l}
 		\textbf{English} & & C1\\
 		\textbf{Russian} & & native\\
-		\textbf{Japanese} & & learnt for a few months
 	\end{tabular}
 \end{minipage}
 \hfill
@@ -166,7 +173,7 @@
 
 	\cvsect{Non-profit}
 
-	I regularly donate to LGBTQ+ charitable organization that helped me in the past
+	I regularly donate to LGBTQ+ charitable organization
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.3\textwidth}
@@ -174,7 +181,7 @@
 
 	\cvsect{Hobbies}
 
-	I love drawing and doing stuff related to visual art in general, wish to continue going to climbing
+	I love everything related to visual art, and wish to develop a game
 \end{minipage}
 
 \end{document}

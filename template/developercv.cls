@@ -170,7 +170,7 @@
 
 % Command to output section title headings
 \newcommand{\cvsect}[1]{% The only parameter is the section text
-	\vspace{\baselineskip} % Whitespace before the section title
+	\vspace{0.5\baselineskip} % Whitespace before the section title
 	\colorbox{black}{\textcolor{white}{\MakeUppercase{\textbf{#1}}}}\\% Section title
 }
 
@@ -186,6 +186,7 @@
 
 % Environment to hold a new list of entries
 \newenvironment{entrylist}{
+	\renewcommand*{\arraystretch}{0.5}
 	\begin{longtable}[H]{l l}
 }{
 	\end{longtable}
@@ -203,4 +204,4 @@
 	}\\\\}
 
 % Command to output a separator slash between lists, e.g. '  /  '
-\newcommand{\slashsep}{\hspace{3mm}/\hspace{3mm}}
+\newcommand{\slashsep}{\hspace{2mm}/\hspace{2mm}}
