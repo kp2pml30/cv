@@ -1,6 +1,6 @@
 {
 	inputs = {
-		nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
+		nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
 		systems = {
 			url = "github:nix-systems/default";
 			inputs.nixpkgs.follows = "nixpkgs";
@@ -21,6 +21,7 @@
 				{
 					devShells.default = pkgs.mkShell {
 						packages = with pkgs; [
+							typst
 							(texliveSmall.withPackages (ps: [
 								ps.raleway
 								ps.ly1
@@ -29,10 +30,13 @@
 								ps.relsize
 							]))
 							pdf2svg
+							nerd-fonts.symbols-only
+							fira-code
+							raleway
 						];
 
 						shellHook = ''
-
+							export TYPST_FONT_PATHS="${pkgs.nerd-fonts.symbols-only}/share/fonts:${pkgs.fira-code}/share/fonts:${pkgs.raleway}/share/fonts"
 						'';
 					};
 				}
