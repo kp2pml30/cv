@@ -1,4 +1,4 @@
-#set page(margin: (x: 2cm, y: 1.75cm))
+#set page(margin: (x: 2cm, y: 1.5cm))
 #set text(size: 9pt, font: "Raleway")
 #set par(justify: true, first-line-indent: 0pt)
 
@@ -105,7 +105,7 @@
     #cvsect("Who Am I?")
     Curious Systems Engineer skilled at designing complex systems and understanding how they work end-to-end
 
-    I have been working on programming languages design, implementation and tooling for over eight years,
+    I have been tinkering with programming languages design, implementation and tooling for over eight years,
     and look forward to continuing to work on bleeding edge technologies
   ],
   [
@@ -121,17 +121,17 @@
       v(lang-row-spacing)
     }
     #langrow[Native][C, #Cpp, Rust, Python]
-    #langrow[Fluent][Java, Zig, Go, Haskell, CMake]
+    #langrow[Fluent][Java, Zig, Go, Haskell]
     #langrow[Professional][Idris, Kotlin, Ruby, TypeScript, C\#, GDScript]
     #langrow[Basic][Bash, Coq, Arend, SQL, Prolog, ECMAScript, Elixir, x86 assembly, LaTeX, Solidity, Lua]
     #v(-lang-row-spacing/2)
     #align(center, line(length: 80%, stroke: 0.3pt))
     #v(lang-row-spacing/2)
-    #langrow[Techs][git, ANTLR4, Happy, tsc, OpenJDK, Z3, ...]
+    #langrow[Techs][git, ANTLR4, Happy, tsc, OpenJDK, Z3, CMake, ...]
     #v(-lang-row-spacing/2)
     #align(center, line(length: 80%, stroke: 0.3pt))
     #v(lang-row-spacing/2)
-    #langrow[Natural][English (~C2), Japanese (~N4), Russian (native)]
+    #langrow[Natural][English (\u{007E}C2), Japanese (\u{007E}N4), Russian (native)]
   ]
 )
 
@@ -146,7 +146,7 @@
     + Designed & Implemented specialized VM
     + Modified Wasmtime for project needs
     + Created storage DB for asynchronous blockchain
-    + Consensus algorithm rework --- proposed and adopted
+    + Consensus algorithm rework (x2) --- proposed and adopted
     #techs("WASM", "Rust", "Python", "Blockchain", "Go")
   ]
 )
@@ -185,14 +185,22 @@
   [#link("https://en.itmo.ru")[ITMO University]],
   [
     Among other subjects, I studied type theory, logics in category theory and semantics of programming languages. Implemented following projects:
-    + Lama language compiler to x86_32 assembly, including precise mark-and-copy GC#mycode("https://github.com/kp2pml30/compilers-supplementary/tree/A10-gc")
-    + LL(1) parser generator (Haskell #sym.arrow Haskell#mycode("https://github.com/kp2pml30/ifmo-labs/tree/master/translation-methods/4") | Idris#mycode("https://github.com/kp2pml30/yadk/tree/master/host-tools/parser-generator"))
-    + Copy-on-write fork in xv6#mycode("https://github.com/kp2pml30/ifmo-labs/tree/master/os/cow-kp2pml30")
-    + Few proofs in Coq in big and small step semantics, as well as in Hoare triples#mycode("https://github.com/kp2pml30/ifmo-labs/tree/master/semantics")
-    + Toy language interpreter in Haskell#mycode("https://github.com/kp2pml30/ifmo-labs/tree/master/fp/hw3")
-    + Intrinsic in OpenJDK for RISC-V
-    + Sea of Nodes IR for TypeScript#mycode("https://github.com/kp2pml30/ifmo-labs/blob/master/verification-tools/ssa/src/index.ts")
-    + DPLL SAT solver
+    #grid(
+      columns: (1fr, 1fr),
+      gutter: 1em,
+      [
+        + Lama compiler to x86_32 with mark-and-copy GC#mycode("https://github.com/kp2pml30/compilers-supplementary/tree/A10-gc")
+        + LL(1) parser generator (Haskell#mycode("https://github.com/kp2pml30/ifmo-labs/tree/master/translation-methods/4") | Idris)
+        + Copy-on-write fork in xv6#mycode("https://github.com/kp2pml30/ifmo-labs/tree/master/os/cow-kp2pml30")
+        + Proofs in Coq (big/small step semantics, Hoare triples)#mycode("https://github.com/kp2pml30/ifmo-labs/tree/master/semantics")
+      ],
+      enum(start: 5,
+        [Toy language interpreter in Haskell#mycode("https://github.com/kp2pml30/ifmo-labs/tree/master/fp/hw3")],
+        [Intrinsic in OpenJDK for RISC-V],
+        [Sea of Nodes IR for TypeScript#mycode("https://github.com/kp2pml30/ifmo-labs/blob/master/verification-tools/ssa/src/index.ts")],
+        [DPLL SAT solver],
+      )
+    )
   ]
 )
 
@@ -208,3 +216,7 @@
     #techs("C", "C++", "OpenGL", "DirectX", "GLSL", "HLSL")
   ]
 )
+
+#cvsect("Personal Projects")
+
+- Soldered ESP32-based smart clock with custom Zig firmware
