@@ -27,7 +27,7 @@
 
 #let entry(dates, title, company, description) = {
   grid(
-    columns: (17.5%, 82.5%),
+    columns: (15%, 85%),
     align(left)[#text(size: 8pt)[#dates]],
     [
       #text(weight: "bold")[#title] #h(1fr) #text(weight: "bold", size: 8pt)[#company]\
@@ -103,9 +103,10 @@
   gutter: 3%,
   [
     #cvsect("Who Am I?")
-    Curious compiler and runtime engineer experienced in exploring large code bases and brainstorming ways of integrating new features into them
+    Curious Systems Engineer skilled at designing complex systems and understanding how they work end-to-end
 
-    I am interested in programming languages design, implementation, tooling and everything related for over eight years and look forward to continuing working on bleeding edge technologies
+    I have been working on programming languages design, implementation and tooling for over eight years,
+    and look forward to continuing to work on bleeding edge technologies
   ],
   [
     #cvsect("Languages & Technologies that I know")
@@ -144,8 +145,8 @@
     Created wasm-based virtual machine#mycode("https://github.com/genlayerlabs/genvm")
     + Designed & Implemented specialized VM
     + Modified Wasmtime for project needs
-    + Created blockchain storage DB
-    + Proposed consensus algorithm rework
+    + Created storage DB for asynchronous blockchain
+    + Consensus algorithm rework --- proposed and adopted
     #techs("WASM", "Rust", "Python", "Blockchain", "Go")
   ]
 )

@@ -22,13 +22,7 @@
 					devShells.default = pkgs.mkShell {
 						packages = with pkgs; [
 							typst
-							(texliveSmall.withPackages (ps: [
-								ps.raleway
-								ps.ly1
-								ps.fontawesome
-								ps.moresize
-								ps.relsize
-							]))
+
 							pdf2svg
 							nerd-fonts.symbols-only
 							fira-code
