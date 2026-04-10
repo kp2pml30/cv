@@ -131,7 +131,7 @@
     #v(-lang-row-spacing/2)
     #align(center, line(length: 80%, stroke: 0.3pt))
     #v(lang-row-spacing/2)
-    #langrow[Natural][English (\u{007E}C2), Japanese (\u{007E}N4), Russian (native)]
+    #langrow[Natural][English (#link("https://iibc.cloudcerts.jp/viewer/cert/5aJemlWBgNAqgu68NgOA5VmIbVAVQ8JRvLE76gejl6rXUew6e62ad5svv51jN3M9")[#math.display(math.frac[C2][#text[TOEIC]#math.attach([], br: [L&R]) #text[ 975]])]), Japanese (\u{007E}N4), Russian (native)]
   ]
 )
 

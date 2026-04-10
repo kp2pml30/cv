@@ -264,7 +264,7 @@
     table.cell(stroke: (left: s-inner, right: s-inner, top: s-outer, bottom: s-outer))[#align(center)[月]],
     table.cell(stroke: (left: s-inner, right: s-outer, top: s-outer, bottom: s-outer))[#align(center)[免許・資格]],
   ),
-  ..entry([], [], [特になし]),
+  ..entry([2026], [3], [TOEIC Listening & Reading 975点]),
   ..end-marker,
 )
 
