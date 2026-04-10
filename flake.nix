@@ -27,10 +27,12 @@
 							nerd-fonts.symbols-only
 							fira-code
 							raleway
+							ipafont
+							ipaexfont
 						];
 
 						shellHook = ''
-							export TYPST_FONT_PATHS="${pkgs.nerd-fonts.symbols-only}/share/fonts:${pkgs.fira-code}/share/fonts:${pkgs.raleway}/share/fonts"
+							export TYPST_FONT_PATHS="${pkgs.nerd-fonts.symbols-only}/share/fonts:${pkgs.fira-code}/share/fonts:${pkgs.raleway}/share/fonts:${pkgs.ipafont}/share/fonts:${pkgs.ipaexfont}/share/fonts"
 						'';
 					};
 				}

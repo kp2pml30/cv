@@ -11,14 +11,15 @@ err () {
 	exit 1
 }
 
-typst compile main.typ
+# NOTE: We do not build resume as it contains personal information
+
+typst compile cv.typ
 
 ! (git diff master --name-only | grep -P '\w') || err "Uncommited changes"
 
 git checkout artifacts
 
-mv main.pdf cv.pdf
 pdf2svg cv.pdf cv.svg
-git add cv.pdf cv.svg
+git add cv.pdf cv.svg --force
 git commit --amend --no-edit
 git checkout master

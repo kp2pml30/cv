@@ -1,5 +1,6 @@
 build
 /.direnv
 /.envrc
-/main.pdf
-/cv.pdf
+/*.pdf
+/resume_jp/personal.typ
+.claude
